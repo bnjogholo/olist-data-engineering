@@ -22,5 +22,14 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  # adding another container to handle Python scripts that do specific tasks
+  # such as data loading, language translation and sentiment analysis
+  # helps manage dependencies & build reproducible environments
+  python-app:
+    container_name: python_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+
 volumes:
   postgres_data:
