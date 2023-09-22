@@ -24,33 +24,3 @@ services:
 
 volumes:
   postgres_data:
-
-# version: '3'
-
-# services:
-#   db:
-#     image: postgres:15
-#     container_name: postgres_container
-#     environment:
-#       - POSTGRES_DB=${POSTGRES_DB}
-#       - POSTGRES_USER=${DATABASE_USER}
-#       - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
-#     ports:
-#       - "5432:5432"
-#     volumes:
-#       - postgres_data:/var/lib/postgresql/data
-
-#   dbt:
-#     image: ghcr.io/dbt-labs/dbt-postgres:1.6.3
-#     container_name: dbt_container
-#     depends_on:
-#       - db
-#     environment:
-#       - DBT_PROFILES_DIR=/app/dbt
-#       - DATABASE_USER=${DATABASE_USER}
-#       - DATABASE_PASSWORD=${DATABASE_PASSWORD}
-#     volumes:
-#       - ./dbt:/app/dbt
-
-# volumes:
-#   postgres_data:
